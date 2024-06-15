@@ -4,10 +4,10 @@ using namespace std;
 using ll=long long;using ull=unsigned long long;using pii=pair<int,int>;
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
-#define YES puts("YES")
-#define NO puts("NO")
-#define Yes puts("Yes")
-#define No puts("No")
+#define YES cout << "YES\n"
+#define NO cout << "NO\n"
+#define Yes cout << "Yes\n"
+#define No cout << "No\n"
 
 #ifndef ONLINE_JUDGE
 #include "template/debug.hpp"
