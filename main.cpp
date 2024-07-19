@@ -29,3 +29,6 @@ int main(){
     return 0;
 }
 
+/*
+1. 除非你明确需要元素去重，不要使用set，使用multiset。
+*/
