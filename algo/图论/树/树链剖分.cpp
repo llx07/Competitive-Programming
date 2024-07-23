@@ -13,7 +13,7 @@ struct HLDecomposition{
             lazy[o]=0;
         }
         void add(int o,int l,int r,int ql,int qr,T qk){
-            // assert(ql<=qr);
+            assert(ql<=qr);
             if(ql<=l&&r<=qr)return apply(o,l,r,qk);
             pushdown(o,l,r);
             int lch=o<<1,rch=o<<1|1,mid=(l+r)>>1;
@@ -22,7 +22,7 @@ struct HLDecomposition{
             t[o]=t[lch]+t[rch];
         }
         T query(int o,int l,int r,int ql,int qr){
-            // assert(ql<=qr);
+            assert(ql<=qr);
             if(ql<=l&&r<=qr)return t[o];
             pushdown(o,l,r);
             int lch=o<<1,rch=o<<1|1,mid=(l+r)>>1;
