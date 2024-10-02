@@ -11,6 +11,12 @@ using ll=long long;using ull=unsigned long long;using pii=pair<int,int>;
 #define No cout << "No\n"
 #define mem0(x) memset((x),0,sizeof(x))
 
+template<typename T>
+ostream& operator<<(ostream& os, const vector<T>& data){
+    for(int i=0;i<data.size();i++)os<<data[i]<<' ';
+	return os;
+}
+
 #ifndef ONLINE_JUDGE
 #include "template/debug.hpp"
 #else
