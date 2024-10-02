@@ -2,8 +2,9 @@
 using namespace std;
 
 using ll=long long;using ull=unsigned long long;using pii=pair<int,int>;
-#define all(x) x.begin(),x.end()
-#define rall(x) x.rbegin(),x.rend()
+#define all(x) (x).begin(),(x).end()
+#define rall(x) (x).rbegin(),(x).rend()
+#define unq(x) (x).erase(unique(all((x))),(x).end())
 #define YES cout << "YES\n"
 #define NO cout << "NO\n"
 #define Yes cout << "Yes\n"
