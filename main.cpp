@@ -17,6 +17,7 @@ ostream& operator<<(ostream& os, const vector<T>& data){
 	return os;
 }
 
+#define NO_COLOR
 #ifndef ONLINE_JUDGE
 #include "template/debug.hpp"
 #else

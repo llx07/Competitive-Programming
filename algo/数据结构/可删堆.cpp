@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template<typename _Tp, typename _Sequence = vector<_Tp>,
 	   typename _Compare  = less<typename _Sequence::value_type> >
 struct Heap{
