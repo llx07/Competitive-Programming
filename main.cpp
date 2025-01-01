@@ -51,4 +51,5 @@ int main(){
 
 /*
 1. 除非你明确需要元素去重，不要使用set，使用multiset。
+2. 用multiset的时候，高智商人士不会直接erase
 */

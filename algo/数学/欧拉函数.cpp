@@ -10,3 +10,8 @@ T phi(T x){
     if (x > 1) ans = ans / x * (x - 1);
     return ans;
 }
+
+// p -> p-1
+// p  * other -> 
+// 1. other 没有p  (p-1) * phi[other]
+// 2. other 有 p   p     * phi[other]

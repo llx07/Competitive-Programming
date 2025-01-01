@@ -22,8 +22,6 @@ void assign(int l,int r,ValueT v){
     odt.insert({l,r,v});
 }
 
-
-
 /*
     auto itr=split(r+1),itl=split(l);
     for(;itl!=itr;++itl){
