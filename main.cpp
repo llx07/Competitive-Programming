@@ -52,4 +52,6 @@ int main(){
 /*
 1. 除非你明确需要元素去重，不要使用set，使用multiset。
 2. 用multiset的时候，高智商人士不会直接erase
+3. 用cout输出浮点数的时候，先切到fixed模式
+4. 如果RE，记得检查vector的越界
 */
