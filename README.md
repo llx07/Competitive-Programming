@@ -1,52 +1,52 @@
 ## 算法目录
 
 <!-- AUTOSTART -->
-- 图论
-    - 2-SAT
-    - SPFA
-    - dijkstra
-    - tarjan【强连通分量】
-    - tarjan【桥】
-    - 欧拉路径【无向图】
-    - 欧拉路径【有向图】
-    - 树
-        - LCA【倍增】
-        - 树链剖分
-        - 树链剖分【纯净版】
-        - 点分治
-    - 网络流
-        - dinic
-        - 最小费用最大流
-- 字符串
-    - KMP
-    - 哈希_字符串
-- 数学
-    - CRT
-    - FFT
-    - exgcd
-    - 快速幂
-    - 提取因数
-    - 欧拉函数【O(n)预处理】
-    - 欧拉函数【O(sqrt n)单个】
-    - 欧拉筛
-    - 组合数【O(n)~O(1)】
-    - 组合数【modint，均摊O(max n)】
-    - 逆元【O(n)预处理】
-- 数据结构
-    - 01-trie
-    - SGB【区间取min】
-    - ST表
-    - 主席树
-    - 二维树状数组
-    - 单调栈
-    - 可删堆
-    - 可撤销并查集
-    - 权值无旋Treap
-    - 树状数组
-    - 珂朵莉树(ODT)
-    - 线段树【区间加，区间求和】
-    - 线段树【通用版】
-- 杂项
-    - modint【动态】
-    - modint【静态】
+- [「图论」](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论)
+    - [2-SAT](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/2-SAT.cpp)
+    - [SPFA](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/SPFA.cpp)
+    - [dijkstra](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/dijkstra.cpp)
+    - [tarjan【强连通分量】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/tarjan【强连通分量】.cpp)
+    - [tarjan【桥】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/tarjan【桥】.cpp)
+    - [欧拉路径【无向图】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/欧拉路径【无向图】.cpp)
+    - [欧拉路径【有向图】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/欧拉路径【有向图】.cpp)
+    - [「树」](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/树)
+        - [LCA【倍增】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/树/LCA【倍增】.cpp)
+        - [树链剖分](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/树/树链剖分.cpp)
+        - [树链剖分【纯净版】](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/树/树链剖分【纯净版】.cpp)
+        - [点分治](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/树/点分治.cpp)
+    - [「网络流」](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/网络流)
+        - [dinic](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/网络流/dinic.cpp)
+        - [最小费用最大流](https://github.com/llx07/Competitive-Programming/tree/main//algo/图论/网络流/最小费用最大流.cpp)
+- [「字符串」](https://github.com/llx07/Competitive-Programming/tree/main//algo/字符串)
+    - [KMP](https://github.com/llx07/Competitive-Programming/tree/main//algo/字符串/KMP.cpp)
+    - [哈希_字符串](https://github.com/llx07/Competitive-Programming/tree/main//algo/字符串/哈希_字符串.cpp)
+- [「数学」](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学)
+    - [CRT](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/CRT.cpp)
+    - [FFT](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/FFT.cpp)
+    - [exgcd](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/exgcd.cpp)
+    - [快速幂](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/快速幂.cpp)
+    - [提取因数](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/提取因数.cpp)
+    - [欧拉函数【O(n)预处理】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/欧拉函数【O(n)预处理】.cpp)
+    - [欧拉函数【O(sqrt n)单个】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/欧拉函数【O(sqrt n)单个】.cpp)
+    - [欧拉筛](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/欧拉筛.cpp)
+    - [组合数【O(n)~O(1)】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/组合数【O(n)~O(1)】.cpp)
+    - [组合数【modint，均摊O(max n)】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/组合数【modint，均摊O(max n)】.cpp)
+    - [逆元【O(n)预处理】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数学/逆元【O(n)预处理】.cpp)
+- [「数据结构」](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构)
+    - [01-trie](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/01-trie.cpp)
+    - [SGB【区间取min】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/SGB【区间取min】.cpp)
+    - [ST表](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/ST表.cpp)
+    - [主席树](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/主席树.cpp)
+    - [二维树状数组](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/二维树状数组.cpp)
+    - [单调栈](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/单调栈.cpp)
+    - [可删堆](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/可删堆.cpp)
+    - [可撤销并查集](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/可撤销并查集.cpp)
+    - [权值无旋Treap](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/权值无旋Treap.cpp)
+    - [树状数组](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/树状数组.cpp)
+    - [珂朵莉树(ODT)](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/珂朵莉树(ODT).cpp)
+    - [线段树【区间加，区间求和】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/线段树【区间加，区间求和】.cpp)
+    - [线段树【通用版】](https://github.com/llx07/Competitive-Programming/tree/main//algo/数据结构/线段树【通用版】.cpp)
+- [「杂项」](https://github.com/llx07/Competitive-Programming/tree/main//algo/杂项)
+    - [modint【动态】](https://github.com/llx07/Competitive-Programming/tree/main//algo/杂项/modint【动态】.cpp)
+    - [modint【静态】](https://github.com/llx07/Competitive-Programming/tree/main//algo/杂项/modint【静态】.cpp)
 <!--  AUTOEND  -->

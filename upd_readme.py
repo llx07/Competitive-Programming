@@ -14,9 +14,9 @@ for dir, dirs, files in os.walk('./algo'):
         continue
     indent = " " * (dir.count('/')-2)*INDENT_SIZE
     
-    s += f"{indent}- {dir[dir.rfind('/')+1:]}\n"
+    s += f"{indent}- [「{dir[dir.rfind('/')+1:]}」](https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]})\n"
     for f in files:
-        s += f"{' '*INDENT_SIZE}{indent}- {f[:f.rfind('.')]}\n"
+        s += f"{' '*INDENT_SIZE}{indent}- [{f[:f.rfind('.')]}](https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}/{f})\n"
     
 
 content = open("README.md","r").read()
