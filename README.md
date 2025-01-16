@@ -1,7 +1,7 @@
 ## 算法目录
 
 <!-- AUTOSTART -->
-- [「图论」](/algo/%E5%9B%BE%E8%AE%BA)
+- 图论
     - [2-SAT](/algo/%E5%9B%BE%E8%AE%BA/2-SAT.cpp)
     - [SPFA](/algo/%E5%9B%BE%E8%AE%BA/SPFA.cpp)
     - [dijkstra](/algo/%E5%9B%BE%E8%AE%BA/dijkstra.cpp)
@@ -9,18 +9,18 @@
     - [tarjan【桥】](/algo/%E5%9B%BE%E8%AE%BA/tarjan%E3%80%90%E6%A1%A5%E3%80%91.cpp)
     - [欧拉路径【无向图】](/algo/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E3%80%90%E6%97%A0%E5%90%91%E5%9B%BE%E3%80%91.cpp)
     - [欧拉路径【有向图】](/algo/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E3%80%90%E6%9C%89%E5%90%91%E5%9B%BE%E3%80%91.cpp)
-    - [「树」](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91)
+    - 树
         - [LCA【倍增】](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/LCA%E3%80%90%E5%80%8D%E5%A2%9E%E3%80%91.cpp)
         - [树链剖分](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86.cpp)
         - [树链剖分【纯净版】](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%E3%80%90%E7%BA%AF%E5%87%80%E7%89%88%E3%80%91.cpp)
         - [点分治](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E7%82%B9%E5%88%86%E6%B2%BB.cpp)
-    - [「网络流」](/algo/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81)
+    - 网络流
         - [dinic](/algo/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/dinic.cpp)
         - [最小费用最大流](/algo/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81.cpp)
-- [「字符串」](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2)
+- 字符串
     - [KMP](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP.cpp)
     - [哈希_字符串](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%93%88%E5%B8%8C_%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)
-- [「数学」](/algo/%E6%95%B0%E5%AD%A6)
+- 数学
     - [CRT](/algo/%E6%95%B0%E5%AD%A6/CRT.cpp)
     - [FFT](/algo/%E6%95%B0%E5%AD%A6/FFT.cpp)
     - [exgcd](/algo/%E6%95%B0%E5%AD%A6/exgcd.cpp)
@@ -32,7 +32,7 @@
     - [组合数【O(n)~O(1)】](/algo/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E3%80%90O%28n%29~O%281%29%E3%80%91.cpp)
     - [组合数【modint，均摊O(max n)】](/algo/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E3%80%90modint%EF%BC%8C%E5%9D%87%E6%91%8AO%28max%20n%29%E3%80%91.cpp)
     - [逆元【O(n)预处理】](/algo/%E6%95%B0%E5%AD%A6/%E9%80%86%E5%85%83%E3%80%90O%28n%29%E9%A2%84%E5%A4%84%E7%90%86%E3%80%91.cpp)
-- [「数据结构」](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+- 数据结构
     - [01-trie](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01-trie.cpp)
     - [SGB【区间取min】](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/SGB%E3%80%90%E5%8C%BA%E9%97%B4%E5%8F%96min%E3%80%91.cpp)
     - [ST表](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/ST%E8%A1%A8.cpp)
@@ -46,7 +46,7 @@
     - [珂朵莉树(ODT)](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%28ODT%29.cpp)
     - [线段树【区间加，区间求和】](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91%E3%80%90%E5%8C%BA%E9%97%B4%E5%8A%A0%EF%BC%8C%E5%8C%BA%E9%97%B4%E6%B1%82%E5%92%8C%E3%80%91.cpp)
     - [线段树【通用版】](/algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91%E3%80%90%E9%80%9A%E7%94%A8%E7%89%88%E3%80%91.cpp)
-- [「杂项」](/algo/%E6%9D%82%E9%A1%B9)
+- 杂项
     - [modint【动态】](/algo/%E6%9D%82%E9%A1%B9/modint%E3%80%90%E5%8A%A8%E6%80%81%E3%80%91.cpp)
     - [modint【静态】](/algo/%E6%9D%82%E9%A1%B9/modint%E3%80%90%E9%9D%99%E6%80%81%E3%80%91.cpp)
 <!--  AUTOEND  -->
