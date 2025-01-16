@@ -4,9 +4,10 @@ INDENT_SIZE = 4
 s = ""
 
 # 假设我们要遍历当前目录及其所有子目录
-for dir, _, files in os.walk('./algo'):
+for dir, dirs, files in os.walk('./algo'):
     # 打印当前目录路径
-    
+    dirs.sort()
+    files.sort()
     
     
     if dir.count('/') == 1:
