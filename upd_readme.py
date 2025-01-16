@@ -1,4 +1,5 @@
 import os
+from urllib.parse import quote
 
 INDENT_SIZE = 4
 s = ""
@@ -14,9 +15,13 @@ for dir, dirs, files in os.walk('./algo'):
         continue
     indent = " " * (dir.count('/')-2)*INDENT_SIZE
     
-    s += f"{indent}- [「{dir[dir.rfind('/')+1:]}」](https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]})\n"
+    url_dir = f"https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}"
+
+    s += f"{indent}- [「{dir[dir.rfind('/')+1:]}」]({quote(url_dir)})\n"
     for f in files:
-        s += f"{' '*INDENT_SIZE}{indent}- [{f[:f.rfind('.')]}](https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}/{f})\n"
+
+        file_dir = f"https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}/{f}"
+        s += f"{' '*INDENT_SIZE}{indent}- [{f[:f.rfind('.')]}]({quote(file_dir)})\n"
     
 
 content = open("README.md","r").read()
