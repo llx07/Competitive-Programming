@@ -9,9 +9,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
@@ -23,6 +20,10 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
-    - name: Test Python
+    - name: Update README
       run: |
-        python -c "import sys; print(sys.version)" 
+        python upd_readme.py
+    - name: Commit & Push 
+      uses: EndBug/add-and-commit@v9
+      # with:
+        # commit: --ammend
