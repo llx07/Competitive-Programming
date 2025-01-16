@@ -28,5 +28,5 @@ jobs:
         python upd_readme.py
     - name: Commit & Push 
       run: |
-          git commit -am 
+          git commit -a
           git push
