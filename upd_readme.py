@@ -28,6 +28,11 @@ END_TAG = '<!--  AUTOEND  -->'
 start_index = content.find(START_TAG) + len(START_TAG)
 end_index = content.find(END_TAG)
 
+old_s = content[start_index:end_index]
+
+if old_s == s:
+    exit(1)
+
 new_content = content[:start_index] + s + content[end_index:]
 
 with open("README.md","w") as f:
