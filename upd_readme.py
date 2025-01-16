@@ -15,12 +15,12 @@ for dir, dirs, files in os.walk('./algo'):
         continue
     indent = " " * (dir.count('/')-2)*INDENT_SIZE
     
-    url_dir = f"https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}"
+    url_dir = f"{dir[1:]}"
 
     s += f"{indent}- [「{dir[dir.rfind('/')+1:]}」]({quote(url_dir)})\n"
     for f in files:
 
-        file_dir = f"https://github.com/llx07/Competitive-Programming/tree/main/{dir[1:]}/{f}"
+        file_dir = f"{dir[1:]}/{f}"
         s += f"{' '*INDENT_SIZE}{indent}- [{f[:f.rfind('.')]}]({quote(file_dir)})\n"
     
 
