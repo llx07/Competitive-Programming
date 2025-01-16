@@ -37,4 +37,5 @@ template <class T, must_int<T> = 0>
     friend bool operator==(const modint &lhs, const modint &rhs) { return lhs.v == rhs.v; }
     friend bool operator!=(const modint &lhs, const modint &rhs) { return lhs.v != rhs.v; }
 };
-using mint = modint<1000000007>;
+const int MOD = 1000000007;
+using mint = modint<MOD>;
