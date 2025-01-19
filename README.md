@@ -24,6 +24,7 @@
     - [CRT](/algo/%E6%95%B0%E5%AD%A6/CRT.cpp)
     - [FFT](/algo/%E6%95%B0%E5%AD%A6/FFT.cpp)
     - [exgcd](/algo/%E6%95%B0%E5%AD%A6/exgcd.cpp)
+    - [因数个数【O(n)预处理】](/algo/%E6%95%B0%E5%AD%A6/%E5%9B%A0%E6%95%B0%E4%B8%AA%E6%95%B0%E3%80%90O%28n%29%E9%A2%84%E5%A4%84%E7%90%86%E3%80%91.cpp)
     - [快速幂](/algo/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%B9%82.cpp)
     - [提取因数](/algo/%E6%95%B0%E5%AD%A6/%E6%8F%90%E5%8F%96%E5%9B%A0%E6%95%B0.cpp)
     - [欧拉函数【O(n)预处理】](/algo/%E6%95%B0%E5%AD%A6/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E3%80%90O%28n%29%E9%A2%84%E5%A4%84%E7%90%86%E3%80%91.cpp)
