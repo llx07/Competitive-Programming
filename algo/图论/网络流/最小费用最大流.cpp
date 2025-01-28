@@ -26,8 +26,8 @@ struct MCMF{
     int _s,_t;
     int fa[_N];
     bool inq[_N]; 
-    Cost d[_N],cost=0;
-    Cap a[_N],flow=0;
+    Cost d[_N],_cost=0;
+    Cap a[_N],_flow=0;
 
     bool _SPFA(){
         fill(d,d+_N,INFDIS);
@@ -51,7 +51,7 @@ struct MCMF{
             }
         }
         if(d[_t]==INFDIS)return 0;
-        flow += a[_t],cost += a[_t]*d[_t]; 
+        _flow += a[_t],_cost += a[_t]*d[_t]; 
         int now = _t;
         while(now!=_s){
             int ind = fa[now];
@@ -62,10 +62,10 @@ struct MCMF{
         return 1;
     }
     pair<Cap,Cost> flow(int s,int t){
-        flow=0,cost=0;
+        _flow=0,_cost=0;
         _s=s,_t=t;
         while(_SPFA());
-        return {flow,cost};
+        return {_flow,_cost};
     }
     void clear(){
         for(int i=0;i<=maxnode;i++)G[i].clear();
