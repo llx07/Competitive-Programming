@@ -11,6 +11,7 @@
     - [欧拉路径【有向图】](/algo/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E3%80%90%E6%9C%89%E5%90%91%E5%9B%BE%E3%80%91.cpp)
     - 树
         - [LCA【倍增】](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/LCA%E3%80%90%E5%80%8D%E5%A2%9E%E3%80%91.cpp)
+        - [单点加，路径查询](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E5%8D%95%E7%82%B9%E5%8A%A0%EF%BC%8C%E8%B7%AF%E5%BE%84%E6%9F%A5%E8%AF%A2.cpp)
         - [树链剖分](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86.cpp)
         - [树链剖分【纯净版】](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%E3%80%90%E7%BA%AF%E5%87%80%E7%89%88%E3%80%91.cpp)
         - [点分治](/algo/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E7%82%B9%E5%88%86%E6%B2%BB.cpp)
@@ -19,7 +20,9 @@
         - [最小费用最大流](/algo/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81.cpp)
 - 字符串
     - [KMP](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP.cpp)
+    - [Z函数](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/Z%E5%87%BD%E6%95%B0.cpp)
     - [哈希_字符串](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%93%88%E5%B8%8C_%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)
+    - [哈希【树状数组】](/algo/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%93%88%E5%B8%8C%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91.cpp)
 - 数学
     - [CRT](/algo/%E6%95%B0%E5%AD%A6/CRT.cpp)
     - [FFT](/algo/%E6%95%B0%E5%AD%A6/FFT.cpp)
