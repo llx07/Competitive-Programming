@@ -34,4 +34,14 @@ struct Trie{
         }
         return res;
     }
+    T min_xor(T x){
+        int u = 1;
+        T res = 0; 
+        for(int i=MAXBIT;i>=0;i--){
+            int c = ((x>>i)&1);
+            if(ch[u][c] && cnt[ch[u][c]])res |= (1<<i),u = ch[u][c];
+            else u = ch[u][c^1];
+        }
+        return res;
+    }
 };
