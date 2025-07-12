@@ -11,8 +11,7 @@ void dijkstra(int s){
         if(vis[u])continue;
         vis[u]=1;
         for(auto [v,w]:G[u]){
-            if(d[v] == d[u]+w)continue;
-            else if(d[v] > d[u]+w){
+            if(d[v] > d[u]+w){
                 d[v] = d[u]+w;
                 pq.push({-d[v],v});
             }
