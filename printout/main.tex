@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{fancyhdr}  % 页眉页脚
+\usepackage{minted}    % 代码高亮
+\usepackage[colorlinks,linkcolor=black]{hyperref}  % 目录可跳转
+\usepackage[table,xcdraw]{xcolor} % 表格背景颜色
+\usepackage{amsmath} % operatorname 用
+\usepackage{float}
+\usepackage{geometry} % 调整页边距
+
+% 调整页边距
+\geometry{a4paper,scale=0.8}
+
+
+% \setlength{\headheight}{5pt}
+
+% 定义页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{ACM参考资料}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+% \setlength{\headheight}{5pt}
+
+\author{Lexiao Lin}   
+\title{ACM参考资料}
+
+\begin{document}
+\maketitle % 封面
+\newpage % 换页
+\tableofcontents % 目录
+\newpage
+
+\section{基础知识}
+\subsection{常用数学函数值}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+$n$ & $\log_{10} n$ & $n!$ & $C(n,n/2)$ & $\operatorname{lcm}(1...n)$ \\
+2          & 0.301030   & 2              & 2              & 2              \\\hline
+3          & 0.477121   & 6              & 3              & 6              \\\hline
+4          & 0.602060   & 24             & 6              & 12             \\\hline
+5          & 0.698970   & 120            & 10             & 60             \\\hline
+6          & 0.778151   & 720            & 20             & 60             \\\hline
+7          & 0.845098   & 5040           & 35             & 420            \\\hline
+8          & 0.903090   & 40320          & 70             & 840            \\\hline
+9          & 0.954243   & 362880         & 126            & 2520           \\\hline
+10         & 1.000000   & 3628800        & 252            & 2520           \\\hline
+11         & 1.041393   & 39916800       & 462            & 27720          \\\hline
+12         & 1.079181   & 479001600      & 924            & 27720          \\\hline
+15         & 1.176091   & 1.31e12        & 6435           & 360360         \\\hline
+20         & 1.301030   & 2.43e18        & 184756         & 232792560      \\\hline
+25         & 1.397940   & 1.55e25        & 5200300        & 2.68e10        \\\hline
+30         & 1.477121   & 2.65e32        & 155117520      & 2.33e12        \\\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{因数，质数表}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|llllll|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+$n\le$              & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^1$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^2$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^3$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^4$}    & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^5$}  & \cellcolor[HTML]{C0C0C0}$10^6$ \\ \hline
+$\max\{\omega(n)\}$ & \multicolumn{1}{l|}{2}                               & \multicolumn{1}{l|}{3}                               & \multicolumn{1}{l|}{4}                               & \multicolumn{1}{l|}{5}                                 & \multicolumn{1}{l|}{26}                              & 7                              \\ \hline
+$\max\{d(n)\}$      & \multicolumn{1}{l|}{4}                               & \multicolumn{1}{l|}{12}                              & \multicolumn{1}{l|}{32}                              & \multicolumn{1}{l|}{64}                                & \multicolumn{1}{l|}{128}                             & 240                            \\ \hline
+$\pi(n)$            & \multicolumn{1}{l|}{4}                               & \multicolumn{1}{l|}{25}                              & \multicolumn{1}{l|}{168}                             & \multicolumn{1}{l|}{1229}                              & \multicolumn{1}{l|}{9592}                            & 78498                          \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+$n\le$              & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^7$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^8$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^9$}  & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{10}$} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{11}$} & $10^{12}$                        \\ \hline
+$\max\{\omega(n)\}$ & \multicolumn{1}{l|}{8}                               & \multicolumn{1}{l|}{8}                               & \multicolumn{1}{l|}{9}                               & \multicolumn{1}{l|}{10}                                & \multicolumn{1}{l|}{10}                              & 11                             \\ \hline
+$\max\{d(n)\}$      & \multicolumn{1}{l|}{448}                             & \multicolumn{1}{l|}{768}                             & \multicolumn{1}{l|}{1344}                            & \multicolumn{1}{l|}{2304}                              & \multicolumn{1}{l|}{4032}                            & 6720                           \\ \hline
+$\pi(n)$            & \multicolumn{1}{l|}{664579}                          & \multicolumn{1}{l|}{5761455}                         & \multicolumn{1}{l|}{5.08e7}                          & \multicolumn{1}{l|}{4.55e8}                            & \multicolumn{1}{l|}{4.12e9}                          & 3.7e10                         \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+$n\le$              & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{13}$} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{14}$} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{15}$} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{16}$}   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}$10^{17}$} & $10^{18}$                        \\ \hline
+$\max\{\omega(n)\}$ & \multicolumn{1}{l|}{12}                              & \multicolumn{1}{l|}{12}                              & \multicolumn{1}{l|}{13}                              & \multicolumn{1}{l|}{13}                                & \multicolumn{1}{l|}{14}                              & 15                             \\ \hline
+$\max\{d(n)\}$      & \multicolumn{1}{l|}{10752}                           & \multicolumn{1}{l|}{17280}                           & \multicolumn{1}{l|}{26880}                           & \multicolumn{1}{l|}{41472}                             & \multicolumn{1}{l|}{64512}                           & 103680                         \\ \hline
+$\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                                                                                                                                                                                                                                                                          \\ \hline
+\end{tabular}
+\end{table}
+
+\section{工具代码}
+\subsection{快读}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/杂项/快读.cpp}
+
+\section{图论} % 一级标题
+
+\subsection{Tarjan (强连通分量)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/tarjan【强连通分量】.cpp}
+
+\subsection{Tarjan (桥)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/tarjan【桥】.cpp}
+
+
+\subsection{欧拉路径 (无向图)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/欧拉路径【无向图】.cpp}
+
+\subsection{欧拉路径 (有向图)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/欧拉路径【有向图】.cpp}
+
+
+
+\subsection{最大流 (dinic)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/网络流/dinic.cpp}
+
+
+\subsection{费用流} % 二级标题
+\inputminted[breaklines, frame=single]{c++}
+{../algo/图论/网络流/最小费用最大流.cpp}
+
+\section{数据结构}
+
+
+\subsection{树状数组}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数据结构/树状数组.cpp}
+
+
+\subsection{二维树状数组}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数据结构/二维树状数组.cpp}
+
+
+\subsection{Segment Tree Beats(取min)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数据结构/SGB【区间取min】.cpp}
+
+
+\subsection{主席树}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数据结构/主席树.cpp}
+
+\subsection{FHQ-Treap}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数据结构/权值无旋Treap.cpp}
+
+
+\section{数学}
+\subsection{逆元(线性递推)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/逆元【O(n)预处理】.cpp}
+
+\subsection{线性筛}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/欧拉筛.cpp}
+
+
+\subsection{欧拉函数(单个)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/欧拉函数【O(sqrt n)单个】.cpp}
+
+\subsection{欧拉函数(线性递推)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/欧拉函数【O(n)预处理】.cpp}
+
+\subsection{拓展欧几里得算法(exgcd)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/exgcd.cpp}
+
+
+\subsection{中国剩余定理(CRT)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/CRT.cpp}
+
+\subsection{快速傅里叶变换(FFT)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/FFT.cpp}
+
+\subsection{快速数论变换(NTT)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/数学/NTT.cpp}
+
+\section{字符串}
+
+\subsection{KMP}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/字符串/KMP.cpp}
+
+\subsection{Z函数(拓展KMP)}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/字符串/Z函数.cpp}
+
+
+\subsection{AC自动机}
+\inputminted[breaklines, frame=single]{c++}
+{../algo/字符串/AC自动机.cpp}
+
+\end{document}
