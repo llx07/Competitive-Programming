@@ -55,5 +55,5 @@ int main(){
 2. 用multiset的时候，高智商人士不会直接erase
 3. 用cout输出浮点数的时候，先切到fixed模式
 4. 如果RE，记得检查vector的越界
-5. dijkstra不加vis数组结果对但是复杂度错
+5. 如果部分WA而且用了long long，检查是否发生了隐式转换的溢出，这个不会报错
 */
