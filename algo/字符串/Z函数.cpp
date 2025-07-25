@@ -1,3 +1,5 @@
+// 下标从 0 开始
+// z[i] 表示 s[i..len-1] 与 s 最长公共前缀长度
 vector<int> z_function(string s) {
     int n = s.length();
     vector<int> z(n);

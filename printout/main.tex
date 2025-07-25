@@ -7,6 +7,7 @@
 \usepackage{amsmath} % operatorname 用
 \usepackage{float}
 \usepackage{geometry} % 调整页边距
+\usepackage{enumitem} % 控制列表间距
 
 % 调整页边距
 \geometry{a4paper,scale=0.8}
@@ -17,6 +18,7 @@
 % 定义页眉页脚
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[L]{\leftmark} % 当前section
 \fancyhead[C]{ACM参考资料}
 \lfoot{}
 \cfoot{}
@@ -84,116 +86,174 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 \end{tabular}
 \end{table}
 
+\newpage
 \section{工具代码}
 \subsection{快读}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/杂项/快读.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/杂项/快读.cpp}
+
+
+\subsection{快速IO}
+\inputminted[breaklines, frame=single]{c++}{../algo/杂项/快速IO.cpp}
 
 \section{图论} % 一级标题
 
-\subsection{Tarjan (强连通分量)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/tarjan【强连通分量】.cpp}
+\subsection{一般图}
 
-\subsection{Tarjan (桥)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/tarjan【桥】.cpp}
+\subsubsection{Tarjan (强连通分量)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/tarjan【强连通分量】.cpp}
+
+\subsubsection{Tarjan (桥)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/tarjan【桥】.cpp}
 
 
-\subsection{欧拉路径 (无向图)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/欧拉路径【无向图】.cpp}
+\subsubsection{欧拉路径 (无向图)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【无向图】.cpp}
 
-\subsection{欧拉路径 (有向图)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/欧拉路径【有向图】.cpp}
+\subsubsection{欧拉路径 (有向图)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【有向图】.cpp}
 
 
 
-\subsection{最大流 (dinic)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/网络流/dinic.cpp}
+\subsubsection{最大流 (dinic)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/网络流/dinic.cpp}
 
 
-\subsection{费用流} % 二级标题
-\inputminted[breaklines, frame=single]{c++}
-{../algo/图论/网络流/最小费用最大流.cpp}
+\subsubsection{费用流} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/网络流/最小费用最大流.cpp}
+
+
+\subsection{树}
+
+\subsubsection{点分治} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/点分治.cpp}
+
+
+\subsubsection{LCA (倍增)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/LCA【倍增】.cpp}
+
+
+\subsubsection{LCA (欧拉序)} % 二级标题
+记录欧拉序每个节点第一次出现的位置，两个位置之间深度最浅的节点就是 LCA。
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/LCA【欧拉序】.cpp}
+
+
+\subsubsection{LCA (DFS 序)} % 二级标题
+对于求出 $u,v$ 的 LCA 来说（不妨设 $\textit{dfn}_u\le \textit{dfn}_v$），$u=v$ 显然，否则在 DFS 序中 $[\textit{dfn}_u+1,\textit{dfn}_v]$ 区间最浅的节点的父亲就是 LCA。
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/LCA【dfs序】.cpp}
+
+
+
+\subsubsection{树链剖分} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/树链剖分【非封装版】.cpp}
+
+
+\subsubsection{矩阵树定理} % 二级标题
+
+Laplace 矩阵 $L=D-A$。
+
+
+
+% 双栏部分（矩阵 D 和 A 的定义）
+\begin{minipage}[t]{0.45\textwidth}
+    $D_{i,i}$ 代表点的度数：
+    \begin{itemize}[noitemsep, topsep=-5pt]
+        \item 无向图：与 $i$ 相连边的权值和；
+        \item 有向图叶向树：入边权值和；
+        \item 有向图根向树：出边权值和；
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    $A_{i,j}$ 表示 $i$ 和 $j$ 之间边数（$i\ne j$）：
+    \begin{itemize}[noitemsep, topsep=-5pt]
+        \item 无向图：$(i,j)$ 权值和；
+        \item 有向图：$i\to j$ 权值和；
+    \end{itemize}
+\end{minipage}
+\bigskip
+
+而 $L$ 的 $(n-1)$ 主子式代表了生成树的个数：
+\begin{itemize}[noitemsep, topsep=-5pt]
+    \item 无向图：所有的 $(n-1)$ 主子式都相等，就表示生成树边权乘积和。
+    \item 有向图：删去第 $k$ 行第 $k$ 列的主子式代表的就是以 $k$ 为根的叶向/根向树边权乘积和。
+\end{itemize}
+
 
 \section{数据结构}
 
 
 \subsection{树状数组}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数据结构/树状数组.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/树状数组.cpp}
 
 
 \subsection{二维树状数组}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数据结构/二维树状数组.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/二维树状数组.cpp}
 
+\subsection{01-Trie}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/01-trie.cpp}
 
-\subsection{Segment Tree Beats(取min)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数据结构/SGB【区间取min】.cpp}
+\subsection{Segment Tree Beats (取min)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/SGB【区间取min】.cpp}
 
 
 \subsection{主席树}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数据结构/主席树.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/主席树.cpp}
 
 \subsection{FHQ-Treap}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数据结构/权值无旋Treap.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/权值无旋Treap.cpp}
+
+
 
 
 \section{数学}
-\subsection{逆元(线性递推)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/逆元【O(n)预处理】.cpp}
+\subsection{逆元 (线性递推)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/逆元【O(n)预处理】.cpp}
 
 \subsection{线性筛}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/欧拉筛.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/欧拉筛.cpp}
 
 
-\subsection{欧拉函数(单个)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/欧拉函数【O(sqrt n)单个】.cpp}
+\subsection{欧拉函数 (单个)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/欧拉函数【O(sqrt n)单个】.cpp}
 
-\subsection{欧拉函数(线性递推)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/欧拉函数【O(n)预处理】.cpp}
+\subsection{欧拉函数 (线性递推)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/欧拉函数【O(n)预处理】.cpp}
 
-\subsection{拓展欧几里得算法(exgcd)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/exgcd.cpp}
+\subsection{拓展欧几里得算法 (exgcd)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/exgcd.cpp}
 
 
-\subsection{中国剩余定理(CRT)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/CRT.cpp}
+\subsection{高斯消元}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/高斯消元.cpp}
 
-\subsection{快速傅里叶变换(FFT)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/FFT.cpp}
+\subsection{行列式 (取模)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/行列式【取模】.cpp}
 
-\subsection{快速数论变换(NTT)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/数学/NTT.cpp}
+
+\subsection{中国剩余定理 (CRT)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/CRT.cpp}
+
+\subsection{快速傅里叶变换 (FFT)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/FFT.cpp}
+
+\subsection{快速数论变换 (NTT)}
+\inputminted[breaklines, frame=single]{c++}{../algo/数学/NTT.cpp}
 
 \section{字符串}
 
 \subsection{KMP}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/字符串/KMP.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/KMP.cpp}
 
 \subsection{Z函数(拓展KMP)}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/字符串/Z函数.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/Z函数.cpp}
 
 
 \subsection{AC自动机}
-\inputminted[breaklines, frame=single]{c++}
-{../algo/字符串/AC自动机.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/AC自动机.cpp}
+
+
+\subsection{Manacher}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/manacher.cpp}
+
 
 \end{document}
