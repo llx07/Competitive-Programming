@@ -99,20 +99,44 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 
 \subsection{一般图}
 
+
+% \subsubsection{最短路 (dijkstra)} % 二级标题
+% \inputminted[breaklines, frame=single]{c++}{../algo/图论/dijkstra.cpp}
+
+
+\subsubsection{Kruskal 重构树} % 二级标题
+
+
+先构建 $n$ 个集合和 $n$ 个点权为 $0$ 的点，每个集合都有一个代表节点。
+
+对于一颗最小生成树，按边权从小到大排序，对于每一条边 $(u,v,w)$，构建一个新的点权为 $w$ 的节点，作为集合 $u,v$ 代表节点的父亲，并将集合 $u,v$ 合并，代表节点更新为新节点。
+
+这样我们就得到了一颗有 $2n-1$ 个节点，$n$ 个叶子的二叉树，这棵树就被称作 Kruskal 重构树。
+
+
+在 Kruskal 重构树上，任意两个叶子节点的 LCA 的点权就是在原图上这两个节点之间所有路径最大边权的最小值。
+
+由此我们看也可以得出，在原图上从节点 $u$ 出发经过所有边权 $\le w$ 的边能到达的节点，就是在 Kruskal 重构树上 $u$ 深度最小且点权 $\le w$ 的祖先 $v$ 的子树中所有叶子节点。
+
 \subsubsection{Tarjan (强连通分量)} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/tarjan【强连通分量】.cpp}
 
 \subsubsection{Tarjan (桥)} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/tarjan【桥】.cpp}
 
-
-\subsubsection{欧拉路径 (无向图)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【无向图】.cpp}
+\subsubsection{Tarjan (割点)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/tarjan【割点】.cpp}
 
 \subsubsection{欧拉路径 (有向图)} % 二级标题
-\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【有向图】.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【有向图】【不封装】.cpp}
 
 
+\subsubsection{欧拉路径 (无向图)} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/欧拉路径【无向图】【不封装】.cpp}
+
+
+\subsubsection{匈牙利算法} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/匈牙利算法.cpp}
 
 \subsubsection{最大流 (dinic)} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/网络流/dinic.cpp}
@@ -200,7 +224,7 @@ Laplace 矩阵 $L=D-A$。
 \inputminted[breaklines, frame=single]{c++}{../algo/数据结构/主席树.cpp}
 
 \subsection{FHQ-Treap}
-\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/权值无旋Treap.cpp}
+\inputminted[breaklines, frame=single]{c++}{../algo/数据结构/权值无旋Treap(fhq).cpp}
 
 
 

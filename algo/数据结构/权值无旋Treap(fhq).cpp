@@ -7,6 +7,7 @@ void maintain(int x){
 }
 void split(int now,int k,int& x,int &y){
     if(!now){x=0,y=0;return;}
+    // 如果按下标分裂，改成左儿子的大小<k
     if(val[now]<=k) x=now, split(ch[now][1], k, ch[now][1], y);
     else y=now,split(ch[now][0],k, x, ch[now][0]);
     maintain(now);

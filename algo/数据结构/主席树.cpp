@@ -11,11 +11,11 @@ int copy(int o){
 int rt[N];
 int build(int l,int r){ // 建一个空的树，返回根
     int o=++tot;
+    t[o].sum=0;
     if(l==r)return o;
     int mid=(l+r)>>1;
     t[o].l=build(l,mid);
     t[o].r=build(mid+1,r);
-    t[o].sum=0;
     return o;
 }
 int modify(int o,int l,int r,int qi){ // 单点修改，返回根
