@@ -1,4 +1,4 @@
-\documentclass[twoside]{article}
+\documentclass[twoside,twocolumn]{article}
 \usepackage[UTF8]{ctex}
 \usepackage{fancyhdr}  % 页眉页脚
 \usepackage{minted}    % 代码高亮
@@ -8,9 +8,12 @@
 \usepackage{float}
 \usepackage{geometry} % 调整页边距
 \usepackage{enumitem} % 控制列表间距
+\usepackage{graphicx}
+\usepackage[fontsize=8pt]{fontsize}
+
 
 % 调整页边距
-\geometry{a4paper,scale=0.8}
+\geometry{a4paper,scale=0.85}
 
 
 % \setlength{\headheight}{5pt}
@@ -18,10 +21,16 @@
 % 定义页眉页脚
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\leftmark} % 当前section
+% \fancyhead[L]{\leftmark} % 当前section
 \fancyhead[C]{ACM参考资料}
 \fancyfoot[RO,LE]{\thepage}
 % \setlength{\headheight}{5pt}
+
+% 调整高亮风格
+\usemintedstyle{default}
+
+% 设置代码字体大小
+\setminted{autogobble,breakanywhere}
 
 \author{Lexiao Lin}   
 \title{ACM参考资料}
@@ -61,9 +70,13 @@ $n$ & $\log_{10} n$ & $n!$ & $C(n,n/2)$ & $\operatorname{lcm}(1...n)$ \\
 \end{table}
 
 
+
+
 \subsection{因数，质数表}
+
 \begin{table}[H]
 \centering
+\resizebox{\columnwidth}{!}{
 \begin{tabular}{|l|llllll|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -82,8 +95,8 @@ $\max\{\omega(n)\}$ & \multicolumn{1}{l|}{12}                              & \mu
 $\max\{d(n)\}$      & \multicolumn{1}{l|}{10752}                           & \multicolumn{1}{l|}{17280}                           & \multicolumn{1}{l|}{26880}                           & \multicolumn{1}{l|}{41472}                             & \multicolumn{1}{l|}{64512}                           & 103680                         \\ \hline
 $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                                                                                                                                                                                                                                                                          \\ \hline
 \end{tabular}
+}
 \end{table}
-
 \newpage
 \section{工具代码}
 \subsection{快读}
@@ -283,9 +296,11 @@ Laplace 矩阵 $L=D-A$。
 \subsection{Manacher}
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/manacher.cpp}
 
+\subsection{最小表示法}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/最小表示法.cpp}
+
 
 % TODO 树哈希
 % TODO 李超
-% TODO 最小表示法
 
 \end{document}
