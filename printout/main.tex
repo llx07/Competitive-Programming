@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[twoside]{article}
 \usepackage[UTF8]{ctex}
 \usepackage{fancyhdr}  % 页眉页脚
 \usepackage{minted}    % 代码高亮
@@ -20,9 +20,7 @@
 \fancyhf{}
 \fancyhead[L]{\leftmark} % 当前section
 \fancyhead[C]{ACM参考资料}
-\lfoot{}
-\cfoot{}
-\rfoot{\thepage}
+\fancyfoot[RO,LE]{\thepage}
 % \setlength{\headheight}{5pt}
 
 \author{Lexiao Lin}   
@@ -151,6 +149,9 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 \subsubsection{点分治} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/树/点分治.cpp}
 
+\subsubsection{DSU on tree} % 二级标题
+\inputminted[breaklines, frame=single]{c++}{../algo/图论/树/dsu_on_tree.cpp}
+
 
 \subsubsection{LCA (倍增)} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/树/LCA【倍增】.cpp}
@@ -276,8 +277,15 @@ Laplace 矩阵 $L=D-A$。
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/AC自动机.cpp}
 
 
+\subsection{后缀数组(SA)}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/SA.cpp}
+
 \subsection{Manacher}
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/manacher.cpp}
 
+
+% TODO 树哈希
+% TODO 李超
+% TODO 最小表示法
 
 \end{document}
