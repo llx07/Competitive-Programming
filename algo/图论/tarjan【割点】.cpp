@@ -1,4 +1,3 @@
-const int N = 1e5+5;
 vector<int> G[N];
 
 int dfn[N],low[N],d=0;

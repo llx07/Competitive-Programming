@@ -20,12 +20,12 @@ ostream& operator<<(ostream& os, const vector<T>& data){
 #ifndef ONLINE_JUDGE
 #include "template/cpp-dump/cpp-dump.hpp"
 #define debug(...) cpp_dump(__VA_ARGS__)
-namespace cp = cpp_dump;
+namespace cppd = cpp_dump;
 CPP_DUMP_SET_OPTION_GLOBAL(max_line_width, 80);
-CPP_DUMP_SET_OPTION_GLOBAL(log_label_func, cp::log_label::filename());
+CPP_DUMP_SET_OPTION_GLOBAL(log_label_func, cppd::log_label::filename());
 CPP_DUMP_SET_OPTION_GLOBAL(enable_asterisk, true);
 #ifdef NO_COLOR
-CPP_DUMP_SET_OPTION_GLOBAL(es_style, cp::types::es_style_t::no_es);
+CPP_DUMP_SET_OPTION_GLOBAL(es_style, cppd::types::es_style_t::no_es);
 #endif // NO_COLOR
 #else
 #define debug(...)

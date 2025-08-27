@@ -97,6 +97,14 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 \end{tabular}
 }
 \end{table}
+
+\subsection{gprof 使用}
+\begin{enumerate}
+    \item 用gcc、g++、xlC编译程序时，使用-pg参数
+    \item 执行编译后的可执行程序，生成文件gmon.out
+    \item 使用gprof命令来分析记录程序运行信息的gmon.out文件（gprof test.exe gmon.out） 
+\end{enumerate}
+
 \newpage
 \section{工具代码}
 \subsection{快读}
@@ -105,6 +113,11 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 
 \subsection{快速IO}
 \inputminted[breaklines, frame=single]{c++}{../algo/杂项/快速IO.cpp}
+
+
+\subsection{无精度问题的向上向下取整除法}
+\inputminted[breaklines, frame=single]{c++}{../algo/杂项/整数取整除法.cpp}
+
 
 \section{图论} % 一级标题
 
@@ -184,14 +197,31 @@ $\pi(n)$            & \multicolumn{6}{l|}{$\pi(x)\sim x/\ln(x)$}                
 \subsubsection{树链剖分} % 二级标题
 \inputminted[breaklines, frame=single]{c++}{../algo/图论/树/树链剖分【非封装版】.cpp}
 
+\subsubsection{某些路径问题单log做法} % 二级标题
+
+
+路径加/单点求和\&子树求和： 设 $a[u]$ 为子树内 $d[u]$ 之和，则
+
+\begin{enumerate}
+    \item 路径加：$d[u]+w$, $d[v]+w$, $d[lca(u,v)]-w d[fa[lca(u,v)]]-w$
+    \item 单点求和：$a[u]=sumd(u)$
+    \item 子树求和：$suma=\sum_v d[v]*(dep[v]-dep[u]+1)$，树状数组维护2系数即可
+\end{enumerate}
+
+
+单点加\&子树加/路径求和： 设 $g[u]$ 表示 $1$ 到 $u$ 权值之和，则
+
+\begin{enumerate}
+    \item 单点加：子树 $d$ 加
+    \item 子树加 ：$u$ 每个子树内 $v$ 有 $g[v] += w*(dep[v]-dep[u]+1)$ 则维护系数加即可
+    \item 路径和：$sum(u,v)=g[u]+g[v]-g[lca(u,v)]-g[fa[lca(u,v)]]$
+\end{enumerate}
 
 \subsubsection{矩阵树定理} % 二级标题
 
 Laplace 矩阵 $L=D-A$。
 
 
-
-% 双栏部分（矩阵 D 和 A 的定义）
 \begin{minipage}[t]{0.45\textwidth}
     $D_{i,i}$ 代表点的度数：
     \begin{itemize}[noitemsep, topsep=-5pt]
@@ -226,6 +256,8 @@ Laplace 矩阵 $L=D-A$。
 
 \subsection{二维树状数组}
 \inputminted[breaklines, frame=single]{c++}{../algo/数据结构/二维树状数组.cpp}
+
+% TODO 线段树二分
 
 \subsection{01-Trie}
 \inputminted[breaklines, frame=single]{c++}{../algo/数据结构/01-trie.cpp}
@@ -264,6 +296,9 @@ Laplace 矩阵 $L=D-A$。
 \subsection{高斯消元}
 \inputminted[breaklines, frame=single]{c++}{../algo/数学/高斯消元.cpp}
 
+% TODO 高斯消元（异或）
+
+
 \subsection{行列式 (取模)}
 \inputminted[breaklines, frame=single]{c++}{../algo/数学/行列式【取模】.cpp}
 
@@ -289,9 +324,24 @@ Laplace 矩阵 $L=D-A$。
 \subsection{AC自动机}
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/AC自动机.cpp}
 
+% TODO AC自动机+拓扑排序优化
 
 \subsection{后缀数组(SA)}
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/SA.cpp}
+
+\subsection{后缀自动机(SAM)}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/SAM.cpp}
+
+
+\subsection{后缀自动机(SAM) map 版}
+\inputminted[breaklines, frame=single, highlightlines={3,10,15,18}]{c++}{../algo/字符串/SAM(map版).cpp}
+
+\subsection{回文树}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/PAM.cpp}
+
+
+\subsection{回文划分 dp 优化}
+\inputminted[breaklines, frame=single]{c++}{../algo/字符串/PAM-回文划分.cpp}
 
 \subsection{Manacher}
 \inputminted[breaklines, frame=single]{c++}{../algo/字符串/manacher.cpp}
@@ -302,5 +352,7 @@ Laplace 矩阵 $L=D-A$。
 
 % TODO 树哈希
 % TODO 李超
+
+% TODO 线性基
 
 \end{document}
