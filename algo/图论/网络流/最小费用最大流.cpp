@@ -11,7 +11,6 @@ struct MCMF{
     vector<Edge> edges; 
     vector<int> G[_N];
     void add_edge(int u,int v,Cap cap,Cost cst){
-        debug(u,v,cap,cst);
         edges.push_back({u,v,cst,cap,0}); 
         edges.push_back({v,u,-cst,0,0});
         auto cnt = edges.size();

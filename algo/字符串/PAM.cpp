@@ -1,8 +1,9 @@
+string s;
 struct PAM{ // sum[i] 以 i 结尾的回文串个数
     int ch[N][26],len[N],fail[N],tot=1,now=1,sum[N];
     void build(){
         fail[0]=1, len[1]=-1;
-        s = "#" + s;
+        s = "#" + s; // 为了变成 1-下标，注意具体实现细节
         for(int i=1;i<s.size();i++){
             int j,v=(s[i]-'a');
             while(s[i-len[now]-1]!=s[i])now=fail[now];

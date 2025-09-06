@@ -9,10 +9,6 @@ void add_edge(int u,int v){
     G[u].push_back(Edge{v,(int)G[v].size(),true});
     if(u!=v)G[v].push_back(Edge{u,(int)G[u].size()-1,true});
 }
-void clear(int n){
-    for(int i=0;i<=n;i++)G[i].clear();
-    while(ans.size())ans.pop();
-}
 void dfs(int u){
     for(int& i=cur[u];i<G[u].size();){
         i++;
